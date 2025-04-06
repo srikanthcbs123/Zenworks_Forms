@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zenworks_Forms_BusinessEntities\Zenworks_Forms_BusinessEntities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MorganStandly_Loan">
+      <HintPath>I:\HMainDocs\newc#one\C#.NET Material each concept\C#.NET Material - Harsha\Harsha C#\250. OOP - Private Assemblies\MorganStandly_Loan\MorganStandly_Loan\bin\Debug\MorganStandly_Loan.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

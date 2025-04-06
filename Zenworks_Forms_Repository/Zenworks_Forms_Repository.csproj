@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zenworks_Forms_BusinessEntities\Zenworks_Forms_BusinessEntities.csproj" />
+    <ProjectReference Include="..\Zenworks_Forms_DBConnectivity\Zenworks_Forms_DBConnectivity.csproj" />
+  </ItemGroup>
+
+</Project>

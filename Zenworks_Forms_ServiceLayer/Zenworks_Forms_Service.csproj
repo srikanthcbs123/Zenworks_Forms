@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zenworks_Forms_BusinessEntities\Zenworks_Forms_BusinessEntities.csproj" />
+    <ProjectReference Include="..\Zenworks_Forms_Repository\Zenworks_Forms_Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BankOfAmerica_LoanDetails">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\BankofAmericaLoan\BankOfAmerica_LoanDetails.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

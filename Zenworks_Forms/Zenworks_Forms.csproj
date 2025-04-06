@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zenworks_Forms_BusinessEntities\Zenworks_Forms_BusinessEntities.csproj" />
+    <ProjectReference Include="..\Zenworks_Forms_DBConnectivity\Zenworks_Forms_DBConnectivity.csproj" />
+    <ProjectReference Include="..\Zenworks_Forms_Repository\Zenworks_Forms_Repository.csproj" />
+    <ProjectReference Include="..\Zenworks_Forms_ServiceLayer\Zenworks_Forms_Service.csproj" />
+  </ItemGroup>
+
+</Project>
