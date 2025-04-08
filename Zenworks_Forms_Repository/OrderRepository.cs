@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Zenworks_Forms_BusinessEntities.Interfaces;
@@ -63,8 +64,8 @@ namespace Zenworks_Forms_Repository
                 {
                     Order ord = new Order();
                     ord.OrderId = Convert.ToInt16(row["OrderId"]);
-                    ord.OrderName = Convert.ToInt32(row["OrderName"]).ToString();
-                    ord.OrderLocation = Convert.ToInt32(row["OrderLocation"]).ToString();
+                    ord.OrderName = Convert.ToString(row["OrderName"]);
+                    ord.OrderLocation = Convert.ToString(row["OrderLocation"]);
                     orderslist.Add(ord);
 
                 }
@@ -86,17 +87,17 @@ namespace Zenworks_Forms_Repository
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "Order");
-
-                foreach (DataRow row in ds.Tables["Orders"].Rows)
+                Order ord = new Order();
+                foreach (DataRow row in ds.Tables["Order"].Rows)
                 {
-                    Order ord = new Order();
+                    
                     ord.OrderId = Convert.ToInt16(row["OrderId"]);
-                    ord.OrderName = Convert.ToInt32(row["OrderName"]).ToString();
-                    ord.OrderLocation = Convert.ToInt32(row["OrderLocation"]).ToString();
+                    ord.OrderName = Convert.ToString(row["OrderName"]);
+                    ord.OrderLocation = Convert.ToString(row["OrderLocation"]);
 
 
                 }
-                return or;
+                return ord;
 
 
             }
@@ -108,6 +109,7 @@ namespace Zenworks_Forms_Repository
             {
                 SqlCommand cmd = new SqlCommand(Storedprocedures.UpdateOrder, con);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue(StoredprocedureParameters.OrderId, Objord.OrderId);
                 cmd.Parameters.AddWithValue(StoredprocedureParameters.OrderName, Objord.OrderName);
                 cmd.Parameters.AddWithValue(StoredprocedureParameters.OrderLocation, Objord.OrderLocation);
                 SqlDataAdapter Da = new SqlDataAdapter(cmd);
